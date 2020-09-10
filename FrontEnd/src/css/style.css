@@ -1,0 +1,11 @@
+.grow img{
+    width: 95%;
+    height: 20%;
+    border-radius: 15%;
+}
+.grow:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
