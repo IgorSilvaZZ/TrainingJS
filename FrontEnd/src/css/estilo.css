@@ -1,0 +1,108 @@
+.navMenu{
+    width: 100%;
+    height: 100px;
+    background-color: #1abc9c;
+}
+.imagemProd{
+    width: 10%;
+    height: 100%;
+    float: right;
+}
+.conteudo{
+    width: 100%;
+    height: 700px;
+    background-color: #1abc9c;
+    position: absolute;
+}
+.tela{
+    width: 98%;
+    background-color: #34495e;
+    height: 600px;
+    margin-left: 1%;
+    margin-top: 1%;
+    border-radius: 10px;
+    position: absolute;
+}
+.infoProd{
+    width: 75%;
+    background-color: white;
+    height: 250px;
+    margin-left: 1%;
+    margin-top: 1%;
+    border-radius: 10px;
+}
+.desc{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+.imgprod{
+    /* background-color: blue; */
+    height: 40%;
+    width: 20%;
+    margin-right: 1%;
+    float: right;
+    margin-top: -18%;
+}
+.regProd{
+    margin-left: 1%;
+    margin-top: 4%;
+    width: 50%;
+    background-color: white;
+    height: 250px;
+    border-radius: 10px;
+}
+.preco{
+    width: 45%;
+    float: right;
+    margin-top: 4%;
+    margin-right: 1%;
+    background-color: white;
+    height: 250px;
+    border-radius: 10px;
+}
+.price{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+}
+.cod{
+    background-color: #34495e;
+    width: 35%;
+    height: 100px;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+.quantidade{
+    background-color: #34495e;
+    width: 25%;
+    height: 100px;
+    margin-left: 1%;
+    border-radius: 10px;
+    float: right;
+    margin-top: -16%;
+    margin-right: 35%;
+}
+.data{
+    background-color: #34495e;
+    float: right;
+    width: 25%;
+    height: 100px;
+    margin-left: 50%;
+    border-radius: 10px;
+    margin-top: -16%;
+    margin-right: 3%;
+}
+.regProd ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+.regProd ul li { 
+    display: inline;
+}
+.regProd ul li p{
+    padding: 2px 10px;
+    display: inline-block;
+}
