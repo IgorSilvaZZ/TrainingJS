@@ -10,25 +10,54 @@
 </head>
 <body>
 
-        <!-- Modal -->
-        <div id="myModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="produto-nome"></h5>
-                <button type="button" class="close" id="btnClose" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="quant">
-                    <input type="text" placeholder="Quantidade" id="qtd">
-                    <input type="text" readonly id="info_modal">
-                    <button type="button" class="btn btn-primary" id="btnAdd">Adicionar</button>
+
+    <!-- Modal Adicionando -->
+    <div id="modalAdd" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastrar Produto</h5>
+                    <button type="button" class="close" id="btnCloseAdd" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="quant">
+                        <input type="text" placeholder="Titulo" name="titleAdd">
+                        <input type="text" placeholder="Nome" name="nameAdd">
+                        <input type="text" placeholder="Preço" name="priceAdd">
+                        <button type="button" class="btn btn-primary" id="btnCad">Adicionar</button>
+                    </div>
+                </div>
                 </div>
             </div>
-            </div>
         </div>
+
+        <!-- Modal Comprando -->
+        <div id="mymodal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="produto-nome"></h5>
+                    <button type="button" class="close" id="btnClose" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="quant">
+                        <input type="text" placeholder="Titulo" name="title">
+                        <input type="text" placeholder="Nome" name="nome">
+                        <input type="text" placeholder="Preço" name="price">
+                        <input type="text" placeholder="Quantidade" id="qtd">
+                        <input type="text" readonly id="info_modal">
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-primary" id="btnAdd">Adicionar</button>
+                        <button type="button" class="btn btn-primary" id="btnEdit">Editar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
 
         <div class="container-menu">
@@ -106,7 +135,8 @@
     <!-- Your custom scripts (optional) -->
     <script type="text/javascript"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/mercado.js"></script>
+    <script src="js/script.js"></script>
+
     
     <script>
         /* jQuery(document).ready(function($) {

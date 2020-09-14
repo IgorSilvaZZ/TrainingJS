@@ -12,10 +12,6 @@ const ProdutoSchema = new mongoose.Schema({
     preco: {
         type: String,
         required: true
-    },
-    image: {
-        type: String,
-        required: true
     }
 });
 

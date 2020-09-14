@@ -179,13 +179,13 @@
 .quant{
     display: flex;
     font-size: 20px;
-    flex-direction: row;
-
+    flex-direction: column;
+    align-items: center;
 }
 #info_modal{
     width: 200px;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 .quant input{
     border: 0;
@@ -194,12 +194,20 @@
     outline: none;
     transition: .2s ease-in-out;
     box-sizing: border-box;
-    width: 150px;
+    padding: 8px;
 }
-.quant button{
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buttons button{
     border: none;
+    margin-right: 10px;
     background: linear-gradient(120deg,#9b59b6,#34495e);
 }
+
+
 
 /* Reponsividade */
 @keyframes progress-animation{
