@@ -184,8 +184,8 @@
 }
 #info_modal{
     width: 200px;
-    border: none;
     font-size: 15px;
+    border: none;
 }
 .quant input{
     border: 0;
@@ -194,12 +194,13 @@
     outline: none;
     transition: .2s ease-in-out;
     box-sizing: border-box;
-    padding: 8px;
+    padding: 5px;
 }
 .buttons{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 5px;
 }
 .buttons button{
     border: none;

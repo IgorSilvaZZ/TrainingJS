@@ -1,15 +1,14 @@
-//Modals
-var modal = document.getElementById("mymodal");
-var modalAdd = document.getElementById("modalAdd");
-
-//Botões do Modal
-var btnClose = document.getElementById("btnClose");
-var btnCloseAdd = document.getElementById("btnCloseAdd");
-
-//Inputs do Modal de Edição e de Comprar
-var title = document.querySelector('input[name="title"]');
-var name = document.querySelector('input[name="nome"]');
-var price = document.querySelector('input[name="price"]');
+//Todos os Ids e Inputs importantes dentro do html
+const ids = {
+    modal: document.getElementById("mymodal"),
+    btnClose: document.getElementById("btnClose"),
+    btnCloseAdd: document.getElementById("btnCloseAdd"),
+    modalAdd: document.getElementById("modalAdd"),
+    title: document.querySelector('input[name="title"]'),
+    nameProduto: document.querySelector('input[name="nome"]'),
+    price: document.querySelector('input[name="price"]'),
+    headerProduto: document.querySelector(".header")
+}
 
 
 //Função de Listar Produtos do Banco(MongoDB) com fetch
@@ -37,15 +36,17 @@ function produtsAll(){
 
                     li.addEventListener("click", () => {
                         let modal_titulo = document.getElementById("produto-nome");
-                        modal.style.display = "block";
-                        modal.style.paddingRight = "17px";
-                        modal.style.marginTop = "120px";
-                        modal.className = "modal fade show";
+                        ids.modal.style.display = "block";
+                        ids.modal.style.paddingRight = "17px";
+                        ids.modal.style.marginTop = "120px";
+                        ids.modal.className = "modal fade show";
                         modal_titulo.innerHTML = elemento.nome;
 
-                        title.value = elemento.titulo;
-                        name.value = elemento.nome;
-                        price.value = elemento.preco;
+                        ids.title.value = elemento.titulo;
+                        ids.nameProduto.value = elemento.nome;
+                        ids.price.value = elemento.preco;
+
+                        change(elemento.preco);
 
                     })
 
@@ -56,9 +57,36 @@ function produtsAll(){
     });
 }
 
-btnClose.addEventListener("click", () => {
-    modal.style.display = "none";
-    modal.className = "modal fade";
+//Abrindo Modal de Criação de Produto
+ids.headerProduto.addEventListener("click", () => {
+    ids.modalAdd.style.display = "block";
+    ids.modalAdd.style.paddingRight = "17px";
+    ids.modalAdd.style.marginTop = "120px";
+    ids.modalAdd.className = "modal fade show";
+});
+
+//Fechando Modal de Criação de Produto
+ids.btnCloseAdd.addEventListener("click", () => {
+    ids.modalAdd.style.display = "none";
+    ids.modalAdd.className = "modal fade";
 })
+
+//Fechando Modal de Edição/Compra Produto
+ids.btnClose.addEventListener("click", () => {
+    ids.modal.style.display = "none";
+    ids.modal.className = "modal fade";
+    document.getElementById("qtd").value = "";
+    document.getElementById("info_modal").value = "";
+})
+
+//Função de mudar o campo de acordo com a quantidade
+var change = function (price){
+    document.getElementById("qtd").addEventListener("keyup", () =>{
+        let quantidade = document.getElementById("qtd").value;
+        let resultado = quantidade * price;
+        document.getElementById("info_modal").value = resultado;
+        
+    });
+}
 
 produtsAll();
