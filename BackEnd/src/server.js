@@ -9,7 +9,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/dbsimulador', {useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/dbsimulador', {useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false});
 
 requireDir('./models');
 
